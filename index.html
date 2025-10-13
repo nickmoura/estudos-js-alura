@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* estado base */
+        :root {
+            --field-radius: 50px;
+
+            /* use a cor do tema como borda base */
+            --field-border: var(--bs-primary, #0d6efd);
+
+            /* texto/placeholder puxam do tema também */
+            --field-text: var(--bs-primary, #0d6efd);
+
+            /* aneis de foco finos */
+            --field-focus-ring: rgba(var(--bs-primary-rgb, 13, 110, 253), .30);
+            --field-focus-ring-key: rgba(var(--bs-primary-rgb, 13, 110, 253), .40);
+        }
+
+        input {
+            border: 1px solid var(--field-border);
+            border-radius: var(--field-radius);
+            color: var(--field-text);
+        }
+
+        input::placeholder {
+            color: var(--field-text);
+            opacity: .8;
+        }
+
+        /* foco com sombra fina e sem “borda interna” */
+        input:focus,
+        input:focus-visible {
+            outline: none;
+            border-color: transparent;
+            box-shadow: 0 0 0 0.18rem var(--field-focus-ring);
+        }
+
+        /* se quiser o foco de teclado um tiquinho mais forte */
+        input:focus-visible {
+            box-shadow: 0 0 0 0.20rem var(--field-focus-ring-key);
+        }
+    </style>
+
+</head>
+
+<body>
+    <form method="POST" class="mt-5 m-auto p-5 border border-primary d-flex flex-column gap-3 w-25 rounded">
+        <input type="text" name="nome" id="nome" placeholder="Nome" class="p-1 ps-3">
+        <input type="tel" name="celular" id="celular" placeholder="Celular" class="p-1 ps-3">
+    </form>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
