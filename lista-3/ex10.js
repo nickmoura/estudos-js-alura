@@ -2,7 +2,7 @@ let saldo = 0
 
 const escolhas = [1, 2, 1, 2, 1, 2, 1, 2, 1, 3]
 
-let depositos = [100, 50, 250, -5]
+const depositos = [100, 50, 250, -5]
 
 let iEscolha = 0
 
@@ -25,6 +25,7 @@ do {
     ) {
         case 1:
             console.log(`Saldo atual: R$ ${saldo.toFixed(2)}`)
+            console.log()
             break
         case 2:
             let valor = depositos[iDeposito]
@@ -32,6 +33,7 @@ do {
                 valor === undefined
             ) {
                 console.log(`Não há mais depósitos.`)
+                console.log()
                 break;
             }
             valor = Number(valor);
@@ -39,15 +41,17 @@ do {
                 !Number.isFinite(valor) || valor <= 0
             ) {
                 console.log(`O valor de R$ ${valor} é inválido.`)
+                console.log()
                 break;
             }
             saldo += valor;
             iDeposito++;
             console.log(`Valor de R$ ${valor} depositado.`)
-
+            console.log()
             break
         case 3:
             console.log(`Encerrando...`)
+            console.log()
             break
         default:
             console.log(`Opção inválida.`)
